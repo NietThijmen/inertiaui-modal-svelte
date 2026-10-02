@@ -107,6 +107,9 @@ importers:
       '@inertiaui/modal-react':
         specifier: workspace:*
         version: link:../react
+      '@inertiaui/modal-svelte':
+        specifier: workspace:*
+        version: link:../svelte
       '@inertiaui/modal-vue':
         specifier: workspace:*
         version: link:../vue
@@ -120,12 +123,18 @@ importers:
       '@inertiajs/react':
         specifier: ^3.0.0
         version: 3.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@inertiajs/svelte':
+        specifier: ^3.0.0
+        version: 3.8.0(svelte@5.57.1)
       '@inertiajs/vue3':
         specifier: ^3.0.0
         version: 3.1.1(vue@3.5.34(typescript@5.9.3))
       '@playwright/test':
         specifier: latest
         version: 1.63.0
+      '@sveltejs/vite-plugin-svelte':
+        specifier: ^7.0.0
+        version: 7.3.1(svelte@5.57.1)(vite@8.0.13(@types/node@25.8.0)(jiti@2.7.0))
       '@tailwindcss/forms':
         specifier: ^0.5.10
         version: 0.5.11(tailwindcss@4.3.0)
@@ -150,6 +159,9 @@ importers:
       react-dom:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
+      svelte:
+        specifier: ^5.46.4
+        version: 5.57.1
       tailwindcss:
         specifier: ^4.0.0
         version: 4.3.0
