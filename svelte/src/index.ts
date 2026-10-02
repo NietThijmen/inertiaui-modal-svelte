@@ -9,10 +9,18 @@ import ModalComponent from './Modal.svelte'
 import ModalLink from './ModalLink.svelte'
 import ModalRoot from './ModalRoot.svelte'
 import { initFromPageProps, modalPropNames, Modal as ModalClass, prefetch, useModalStack } from './modalStack.svelte.js'
+import type {
+    HttpMethod,
+    ModalConfig,
+    ModalResponseData,
+    ModalStack,
+    PrefetchOption,
+    PrefetchOptions,
+    ReloadOptions,
+    VisitOptions,
+} from './modalStack.svelte.js'
 import useModal from './useModal.js'
 import WhenVisible from './WhenVisible.svelte'
-
-import type { HttpMethod, ModalConfig, ModalResponseData, ModalStack, PrefetchOption, PrefetchOptions, ReloadOptions, VisitOptions } from './modalStack.svelte.js'
 
 function visitModal(url: string, options: VisitOptions = {}): Promise<ModalClass> {
     return useModalStack()
