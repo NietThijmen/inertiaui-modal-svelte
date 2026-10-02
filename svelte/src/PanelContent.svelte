@@ -195,10 +195,19 @@
     }
 
     function openDialog(): void {
-        if (dialogRef && !dialogRef.open) {
-            dialogRef.showModal()
-            tick().then(() => animateIn(nativeWrapperRef))
-        }
+        // showModal() must run after the modal shell has been portaled to
+        // document.body. Opening earlier lets the move drop the dialog out of
+        // the top layer, where Escape no longer closes it.
+        tick().then(() => {
+            const dialog = dialogRef
+
+            if (!dialog || dialog.open) {
+                return
+            }
+
+            dialog.showModal()
+            void animateIn(nativeWrapperRef)
+        })
     }
 
     function closeDialog(): void {
