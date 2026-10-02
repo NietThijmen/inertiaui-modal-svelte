@@ -1,8 +1,8 @@
 import fs from 'fs'
 
 import inertia from '@inertiajs/vite'
-import tailwindcss from '@tailwindcss/vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import vue from '@vitejs/plugin-vue'
 import dotenv from 'dotenv'
